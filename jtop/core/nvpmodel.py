@@ -85,6 +85,7 @@ def nvpmodel_query():
             parsed_line = match.groupdict()
             # Extract NV Power Mode
             return {'name': parsed_line['name'], 'id': int(lines[idx + 1])}
+    return {'name': "?", 'id': 0}
 
 
 def set_nvpmodel_level(level):
